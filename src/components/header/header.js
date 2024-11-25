@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import './styles.css'; 
 
 const Navbar = () => {
@@ -6,27 +6,12 @@ const Navbar = () => {
   const menuRef = useRef(null);
   const menuIconRef = useRef(null);
 
+  // Função para alternar a visibilidade do menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        menuRef.current && !menuRef.current.contains(event.target) &&
-        menuIconRef.current && !menuIconRef.current.contains(event.target)
-      ) {
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
-
+  // Função para fechar o menu manualmente (pode ser chamada ao clicar nos itens)
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -45,10 +30,10 @@ const Navbar = () => {
               &#10005; {/* Ícone de fechar (X) */}
             </li>
           )}
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#tech">Tecnologias</a></li>
-          <li><a href="#aboutme">Sobre mim</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#projects" onClick={closeMenu}>Projetos</a></li>
+          <li><a href="#tech" onClick={closeMenu}>Tecnologias</a></li>
+          <li><a href="#aboutme" onClick={closeMenu}>Sobre mim</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contato</a></li>
         </ul>
       </div>
     </div>

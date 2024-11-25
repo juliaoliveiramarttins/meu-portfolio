@@ -1,6 +1,6 @@
 /* Container principal para o About Me */
 .about-me-container {
-  padding: 60px 20px;
+  padding: 50px 20px;
   background-color: #f9f9f9;
 }
 
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;/* Alinha o conteúdo ao topo */
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;/* Permite que o layout seja flexível em telas pequenas */
   max-width: 1200px;
   margin: 0 auto;
@@ -22,7 +22,9 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;/* Impede que a imagem encolha */
+  margin-top: 70px;
 }
+
 
 /* Estilo do texto do About Me */
 .about-me-text {
@@ -93,7 +95,11 @@
   .about-me-image img {
     width: 300px;
     height: 300px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
   }
 
   .about-me-text {
@@ -115,13 +121,15 @@
   .about-me-inner {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-  }
+    }
 
   .about-me-image {
-    margin-bottom: 20px;
     width: 250px;
     height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:60px
   }
 
   .about-me-text {
@@ -145,12 +153,18 @@
 /* Responsividade para telas menores que 480px */
 @media (max-width: 480px) {
   .about-me-image img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+
   }
 
   .about-me-text h2 {
     font-size: 1.5rem;
+    display: flex;
+    margin-top: -10px;
+    
   }
 
   .about-me-text p {

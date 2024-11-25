@@ -19,7 +19,6 @@ h2 {
     letter-spacing: 1px;
     position: relative; /* Necessário para a linha abaixo do título */
     display: inline-block;
-    padding-bottom: 10px;
     transition: color 0.3s ease;
     /* Suaviza a mudança de cor */
 }
