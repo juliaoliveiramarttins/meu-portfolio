@@ -1,0 +1,178 @@
+/* Barra de navegação */
+.navbar-container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 10px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid #90b4df;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Itens de navegação */
+.navbar-itens {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+/* Estilos para os itens do menu */
+.navbar-itens li {
+  margin-left: 20px;
+  padding-right: 20px;
+  
+}
+
+/* Links de navegação */
+.navbar-itens a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin: 15px;
+  position: relative; /* Necessário para o posicionamento da linha */
+  
+}
+
+/* Linha de hover nos links */
+.navbar-itens a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Coloca a linha um pouco abaixo do texto */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background-color: #2981fd; 
+  transform: scaleX(0); /* Começa invisível */
+  transform-origin: bottom right; /* Faz a linha começar do lado direito */
+  transition: transform 0.3s ease; /* Anima a linha */
+}
+
+/* Efeito de hover nos links (linha aparece) */
+.navbar-itens a:hover {
+  color: #2981fd;
+  transform: translateY(-2px);
+}
+
+.navbar-itens a:hover::after {
+  transform: scaleX(1); /* Expande a linha quando passar o mouse */
+}
+
+/* Efeito de active nos links */
+.navbar-itens a:active {
+  color: #0056b3;
+  transform: translateY(2px);
+}
+
+/* Menu hamburguer */
+.menu-icon {
+  color: #333;
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Responsividade para Header */
+@media (max-width: 885px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 36px;
+    justify-content: space-between;
+    
+  }
+
+  /* Menu hamburguer: Aparece apenas em telas pequenas */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Ocultar o menu em dispositivos menores */
+  .navbar-itens {
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 2px 0 5px #00000080;
+    height: 100%;
+    right: -300px;
+    position: fixed;
+    top: 0;
+    transition: right .4s ease;
+    width: 250px;
+    z-index: 1;
+    padding: 20px 0px;
+    
+  }
+
+  /* Adicionar o botão de fechar no canto superior direito */
+  .close-btn {
+    display: flex;
+    justify-content: right;
+    right: 10px; /* Distância da direita */
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;    
+  }
+
+  /* Ajustes no logo para telas pequenas */
+  .logo {
+    width: 90px;
+  }
+
+  /* Tamanho de fonte maior para links no mobile */
+  .navbar-itens a {
+    font-size: 20px;
+  }
+
+  /* Cada item com mais espaço no mobile */
+  .navbar-itens li {
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Adicionar linha de separação entre os itens quando o menu estiver aberto */
+  .navbar-itens li {
+    margin-top: 11px;
+    text-align: left;
+  }
+
+  /* Mostrar menu quando ativado */
+  .navbar-itens.show {
+    right: 0;
+  }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+  .navbar-itens a {
+    font-size: 16px;
+  }
+
+  .navbar-itens li {
+    margin-bottom: 12px;
+  }
+
+  .menu-icon {
+    font-size: 35px;
+  }
+}
