@@ -1,10 +1,9 @@
-Para baixar os arquivos necessários rode o comando:
-
+1-instale o node modules:
 
 npm install
 
 
-Para rodar a aplicação rode o comando:
+2-inicie a aplicação
 
 
 npm start
