@@ -1,0 +1,86 @@
+.contact-info-container {
+    text-align: center;
+    margin: 40px 0;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact-info-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.contact-info-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Responsividade para telas menores que 768px (tablets e telas pequenas) */
+@media (max-width: 768px) {
+    .contact-info-container {
+        padding: 30px; 
+        margin: 30px 0;
+    }
+
+    .contact-info-container h2 {
+        font-size: 1.8rem; /* Reduzir o tamanho do título */
+    }
+
+    .contact-info-links {
+        gap: 20px; /* Menor espaço entre os itens */
+    }
+
+    .contact-info-links a {
+        font-size: 1rem; /* Reduzir o tamanho da fonte dos links */
+    }
+
+    .contact-info-icon {
+        width: 25px; /* Diminuir o tamanho do ícone */
+        height: 25px; /* Diminuir o tamanho do ícone */
+    }
+}
+
+/* Responsividade para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    .contact-info-container {
+        padding: 20px; 
+        margin: 20px 0; 
+    }
+
+    .contact-info-container h2 {
+        font-size: 1.5rem; /* Reduzir ainda mais o título */
+    }
+
+    .contact-info-links {
+        gap: 15px; /* Menor espaçamento entre os links */
+        justify-content: center; 
+    }
+
+    .contact-info-links a {
+        font-size: 0.9rem; /* Diminuir o tamanho da fonte */
+    }
+
+    .contact-info-icon {
+        width: 20px; /* Reduzir o tamanho dos ícones */
+        height: 20px; /* Reduzir o tamanho dos ícones */
+    }
+}

@@ -1,0 +1,23 @@
+.footer {
+    background-color: #90b4df; 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px; 
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer strong {
+    font-weight: bold;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .footer p {
+      font-size: 0.9rem;
+    }
+  }
+  

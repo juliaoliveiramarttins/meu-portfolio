@@ -1,0 +1,141 @@
+/* Estilos para o conteúdo principal */
+.projects {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 170px;
+  position: relative;/* Necessário para a linha abaixo do título */
+  display: inline-block;
+  padding-bottom: 10px;
+  transition: color 0.3s ease; /* Para suavizar a mudança de cor */
+}
+
+/* Adicionando uma linha animada abaixo do título */
+.projects h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;/* Espessura da linha */
+  background-color: #376baf;/* Cor da linha */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse no título */
+.projects h1:hover::after {
+  transform: scaleX(1); /* A linha cresce horizontalmente ao passar o mouse */
+}
+
+.projects h1:hover {
+  color: #376baf;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;/* Colunas com o mesmo tamanho, cada uma ocupa 50% */
+  gap: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Estilos individuais para cada projeto */
+.project {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Efeito de hover para o projeto */
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f3f3f3;
+}
+
+/* Título de cada projeto */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #376baf;
+  margin-bottom: 25px;
+  margin-top: 1px;
+  transition: color 0.3s ease;
+}
+
+
+
+/* Imagem do projeto */
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Descrição do projeto */
+.description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+
+/* Responsividade para os projetos */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .projects h1 {
+    font-size: 30px;
+    margin-top: 140px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h1 {
+    font-size: 28px;
+  }
+
+  .project img {
+    max-width: 100%;
+  }
+}
