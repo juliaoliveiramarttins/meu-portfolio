@@ -41,11 +41,11 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;/* Colunas com o mesmo tamanho, cada uma ocupa 50% */
   gap: 30px;
   padding: 0 20px;
   box-sizing: border-box;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -100,30 +100,6 @@
   text-align: justify;
   margin-top: 10px;
   flex-grow: 1;
-}
-
-
-.tools-list {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-}
-
-.tools-list li {
-  display: flex;
-  align-items: center;
-}
-
-.tools-list img {
-  width: 40px; /* Ajuste o tamanho conforme necessário */
-  height: 40px;
-  margin-right: 10px;
-}
-
-.tools-list span {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 

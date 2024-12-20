@@ -27,22 +27,6 @@ const MainSection = () => {
                         <p>
                             O design foi inspirado na minha saga favorita: <strong>Harry Potter.</strong> Você pode explorar mais sobre a história do projeto e seu universo visitando o site.
                         </p>
-
-                        
-                    </div>
-                    <div className='tools'>
-                    <h4>Ferramentas e Tecnologias utilizadas:</h4>
-                        <ul className='tools-list'>
-                            <li>
-                                <img src='./img/html-5.png' alt='HTML5' />
-                            </li>
-                            <li>
-                                <img src='./img/css-3.png' alt='CSS3' />
-                            </li>
-                            <li>
-                                <img src='./img/js.png' alt='JavaScript' />
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -66,24 +50,6 @@ const MainSection = () => {
                             Também participei ativamente da definição da tipografia e, claro, no desenvolvimento da programação.
                         </p>
                     </div>
-                    <div className='tools'>
-                    <h4>Ferramentas e Tecnologias utilizadas:</h4>
-                        <ul className='tools-list'>
-                            <li>
-                                <img src='./img/react.png' alt='React' />
-                            </li>
-                            <li>
-                                <img src='./img/html-5.png' alt='HTML5' />
-                            </li>
-                            <li>
-                                <img src='./img/css-3.png' alt='CSS3' />
-                            </li>
-                            <li>
-                                <img src='./img/js.png' alt='JavaScript' />
-                            </li>
-                            
-                        </ul>
-                    </div>
                 </div>
 
                 <div className='project'>
@@ -106,18 +72,6 @@ const MainSection = () => {
                             Este projeto foi criado com o objetivo de conhecer novas funcionalidades e tags do <strong>HTML</strong> e <strong>CSS</strong>.
                         </p>
                     </div>
-
-                    <div className='tools'>
-                        <h4>Ferramentas e Tecnologias utilizadas:</h4>
-                        <ul className='tools-list'>
-                            <li>
-                                <img src='./img/html-5.png' alt='HTML5' />
-                            </li>
-                            <li>
-                                <img src='./img/css-3.png' alt='CSS3' />
-                            </li>
-                        </ul>
-                    </div>
                 </div>
 
                 <div className="project">
@@ -136,18 +90,6 @@ const MainSection = () => {
                             Todas as interfaces estão sendo projetadas no <strong>Figma</strong>, o que garante um processo de desenvolvimento ágil e colaborativo,
                             permitindo que a equipe trabalhe de forma integrada e sem complicações.
                         </p>
-                    </div>
-                    <div className='tools'>
-                    <h4>Ferramentas e Tecnologias utilizadas:</h4>
-                        <ul className='tools-list'>
-                            <li>
-                                <img src='./img/figma.png' alt='figma' />
-                            </li>
-                            <li>
-                                <img src='./img/canva.png' alt='canva' />
-                            </li>
-                          
-                        </ul>
                     </div>
                 </div>
 
